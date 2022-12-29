@@ -5,8 +5,7 @@ const ns = 'llc.sauce.sauce4zwift';
 const actions = {
     'reset-stats': onResetStats,
     'lap': onLap,
-    'hide-windows': onHideWindows,
-    'show-windows': onShowWindows,
+    'show-hide-windows': onShowHideWindows,
 };
 
 
@@ -37,9 +36,11 @@ async function onHideWindows(ev) {
 }
 
 
-async function onShowWindows(ev) {
+let showing = true;
+async function onShowHideWindows(ev) {
     console.info(ev);
-    await rpc('showAllWindows');
+    showing = !showing;
+    await rpc((showing ? 'hide' : 'show') + 'AllWindows');
 }
 
 

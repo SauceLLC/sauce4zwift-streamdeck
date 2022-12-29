@@ -20,27 +20,17 @@
 	"Category": "Sauce for Zwift",
 	"CategoryIcon": "assets/icon",
 	"Actions": [{
-        "Icon": "assets/show-windows",
-        "Name": "Show Windows",
-        "Controllers": ["Keypad"],
-        "States": [{
-            "Image": "assets/hide-windows",
-            "Image": "assets/show-windows"
-        }],
-        "Tooltip": "Show all overlay Sauce windows",
-        "UUID": "llc.sauce.sauce4zwift.show-windows"
-    }, {
-        "Icon": "assets/hide-windows",
-        "Name": "Hide Windows",
+        "Icon": "assets/show-hide-windows-action",
+        "Name": "Show/Hide Windows",
         "Controllers": ["Keypad"],
         "States": [{
             "Image": "assets/show-windows",
             "Image": "assets/hide-windows"
         }],
-        "Tooltip": "Hide all overlay Sauce windows",
-        "UUID": "llc.sauce.sauce4zwift.hide-windows"
+        "Tooltip": "Show/Hide all overlay Sauce windows",
+        "UUID": "llc.sauce.sauce4zwift.show-hide-windows"
     }, {
-        "Icon": "assets/lap",
+        "Icon": "assets/lap-action",
         "Name": "Start Lap",
         "Controllers": ["Keypad"],
         "States": [{
@@ -49,7 +39,7 @@
         "Tooltip": "Start another Sauce lap",
         "UUID": "llc.sauce.sauce4zwift.lap"
     }, {
-        "Icon": "assets/reset-stats",
+        "Icon": "assets/reset-stats-action",
         "Name": "Reset Stats",
         "Controllers": ["Keypad"],
         "States": [{
