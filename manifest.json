@@ -4,46 +4,58 @@
 	"CodePath": "app.html",
 	"Description": "Control Sauce for Zwift on your StreamDeck",
 	"Name": "Sauce for Zwift Controls",
-	"Icon": "actions/template/assets/icon",
+	"Icon": "assets/icon",
 	"URL": "https://github.com/SauceLLC/sauce4zwift-streamdeck",
 	"Version": "0.0.0",
 	"Software": {
 		"MinimumVersion": "5.0"
 	},
-	"OS": [
-		{
-			"Platform": "mac",
-			"MinimumVersion": "10.11"
-		},
-		{
-			"Platform": "windows",
-			"MinimumVersion": "10"
-		}
-	],
+	"OS": [{
+        "Platform": "mac",
+        "MinimumVersion": "10.11"
+    }, {
+        "Platform": "windows",
+        "MinimumVersion": "10"
+    }],
 	"Category": "Sauce for Zwift",
-	"CategoryIcon": "actions/template/assets/categoryicon",
-	"Actions": [
-		{
-			"Icon": "actions/template/assets/actionimage",
-			"Name": "Example Action",
-			"Controllers": ["Keypad", "Encoder"],
-			"Encoder": {
-				"layout": "$B1",
-				"TriggerDescription": {
-					"Rotate": "Describe the rotation",
-					"Push": "Describe the encoder push",
-					"Touch": "Describe the touch",
-					"LongTouch": "Describe the long touch"
-				}
-			},
-			"States": [
-				{
-					"Image": "actions/template/assets/action"
-				}
-			],
-			"Tooltip": "This is an example tooltip",
-			"UUID": "com.elgato.template.action",
-			"PropertyInspectorPath": "actions/template/property-inspector/inspector.html"
-		}
-	]
+	"CategoryIcon": "assets/icon",
+	"Actions": [{
+        "Icon": "assets/show-windows",
+        "Name": "Show Windows",
+        "Controllers": ["Keypad"],
+        "States": [{
+            "Image": "assets/hide-windows",
+            "Image": "assets/show-windows"
+        }],
+        "Tooltip": "Show all overlay Sauce windows",
+        "UUID": "llc.sauce.sauce4zwift.show-windows"
+    }, {
+        "Icon": "assets/hide-windows",
+        "Name": "Hide Windows",
+        "Controllers": ["Keypad"],
+        "States": [{
+            "Image": "assets/show-windows",
+            "Image": "assets/hide-windows"
+        }],
+        "Tooltip": "Hide all overlay Sauce windows",
+        "UUID": "llc.sauce.sauce4zwift.hide-windows"
+    }, {
+        "Icon": "assets/lap",
+        "Name": "Start Lap",
+        "Controllers": ["Keypad"],
+        "States": [{
+            "Image": "assets/lap"
+        }],
+        "Tooltip": "Start another Sauce lap",
+        "UUID": "llc.sauce.sauce4zwift.lap"
+    }, {
+        "Icon": "assets/reset-stats",
+        "Name": "Reset Stats",
+        "Controllers": ["Keypad"],
+        "States": [{
+            "Image": "assets/reset-stats"
+        }],
+        "Tooltip": "Reset Sauce stats",
+        "UUID": "llc.sauce.sauce4zwift.reset-stats"
+    }]
 }
