@@ -24,7 +24,8 @@
         "Name": "Show/Hide Windows",
         "Controllers": ["Keypad"],
         "States": [{
-            "Image": "assets/show-windows",
+            "Image": "assets/show-windows"
+        }, {
             "Image": "assets/hide-windows"
         }],
         "Tooltip": "Show/Hide all overlay Sauce windows",
