@@ -59,7 +59,7 @@ class ELGSDStreamDeck extends ELGSDApi {
 	 * Request the actions's persistent data. StreamDeck does not return the data, but trigger the actions's didReceiveSettings event
 	 * @param {string} [context]
 	 */
-	 getSettings(context) {
+	getSettings(context) {
 		this.send(context, Events.getSettings);
 	}
 
@@ -156,16 +156,31 @@ class ELGSDStreamDeck extends ELGSDApi {
 
 	/**
 	 * Set the properties of the layout on the Stream Deck + touch display
-	 * @param {*} context 
-	 * @param {*} payload 
+	 * @param {*} context
+	 * @param {*} payload
 	 */
 	setFeedback(context, payload) {
 		if (!context) {
-			console.error('A key context is required for setFeedback.');
+			console.error('A context is required for setFeedback.');
 		}
 
 		this.send(context, Events.setFeedback, {
 			payload,
+		});
+	}
+
+	/**
+	 * Set the active layout by ID or path for the Stream Deck + touch display
+	 * @param {*} context
+	 * @param {*} layout
+	 */
+	setFeedbackLayout(context, layout) {
+		if (!context) {
+			console.error('A context is required for setFeedbackLayout.');
+		}
+
+		this.send(context, Events.setFeedbackLayout, {
+			payload: { layout },
 		});
 	}
 
@@ -254,7 +269,7 @@ class ELGSDStreamDeck extends ELGSDApi {
 	 * @param {string} device
 	 * @param {string} [profile]
 	 */
-	 switchToProfile(device, profile) {
+	switchToProfile(device, profile) {
 		if (!device) {
 			console.error('A device id is required for switchToProfile.');
 		}
@@ -276,9 +291,9 @@ const $SD = new ELGSDStreamDeck();
  * @param {string} actionInfo - Context is an internal identifier used to communicate to the host application.
  */
 function connectElgatoStreamDeckSocket(port, uuid, messageType, appInfoString, actionInfo) {
-    const delay = window?.initialConnectionDelay || 0;
+	const delay = window?.initialConnectionDelay || 0;
 
-    setTimeout(() => {
-        $SD.connect(port, uuid, messageType, appInfoString, actionInfo);
-    }, delay);
+	setTimeout(() => {
+		$SD.connect(port, uuid, messageType, appInfoString, actionInfo);
+	}, delay);
 }
