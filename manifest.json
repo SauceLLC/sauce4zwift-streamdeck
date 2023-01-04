@@ -24,29 +24,36 @@
         "Name": "Show/Hide Windows",
         "Controllers": ["Keypad"],
         "States": [{
-            "Image": "assets/show-windows"
+            "Image": "assets/hide-windows",
+            "Title": "Hide"
         }, {
-            "Image": "assets/hide-windows"
+            "Image": "assets/show-windows",
+            "Title": "Show"
         }],
         "Tooltip": "Show/Hide all overlay Sauce windows",
-        "UUID": "llc.sauce.sauce4zwift.show-hide-windows"
+        "UUID": "llc.sauce.sauce4zwift.show-hide-windows",
+        "PropertyInspectorPath": "props.html"
     }, {
         "Icon": "assets/lap-action",
         "Name": "Start Lap",
         "Controllers": ["Keypad"],
         "States": [{
-            "Image": "assets/lap"
+            "Image": "assets/lap",
+            "Title": "Laps"
         }],
         "Tooltip": "Start another Sauce lap",
-        "UUID": "llc.sauce.sauce4zwift.lap"
+        "UUID": "llc.sauce.sauce4zwift.lap",
+        "PropertyInspectorPath": "props.html"
     }, {
         "Icon": "assets/reset-stats-action",
         "Name": "Reset Stats",
         "Controllers": ["Keypad"],
         "States": [{
-            "Image": "assets/reset-stats"
+            "Image": "assets/reset-stats",
+            "Title": "Reset"
         }],
         "Tooltip": "Reset Sauce stats",
-        "UUID": "llc.sauce.sauce4zwift.reset-stats"
+        "UUID": "llc.sauce.sauce4zwift.reset-stats",
+        "PropertyInspectorPath": "props.html"
     }]
 }
